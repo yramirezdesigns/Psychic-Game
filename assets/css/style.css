@@ -1,0 +1,22 @@
+h5 {
+    text-align: center;
+}
+
+#textOnImage {
+    position: relative;
+    align-content: center;    
+}
+
+.centeredText {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Sigmar One', cursive;
+    font-size: 80px;
+    color: white;
+    align-content: center;
+    text-align: center;
+    opacity: .5;
+  }
+

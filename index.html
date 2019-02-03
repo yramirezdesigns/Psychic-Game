@@ -5,16 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Sigmar+One" rel="stylesheet">
 </head>
 <body>
-    <h1>Psychic Game</h1>
-    <p>Guess what letter I'm thinking of</p>
-    <div>
-        <p>wins:<span id="winsNum"></span></p>
-        <p>Losses:<span id="lossesNum"></span></p>
-        <p>Guesses Left:<span id="guessesLeftNum"></span></p>
-        <p>Your Guesses so far:<span id="guessesSoFarLet"></span></p>
-    </div>    
+    <div class = "container">
+        <div Class = "row">
+            <div class = "col-md-12">
+                <span class="d-block p-2 bg-dark text-white"><h1>Psychic Game</h1>
+                </span>
+            </div>
+        </div>
+        <div Class = "row">
+            <div class = "col-md-12">
+                <h5 class="text-secondary">Guess what letter I'm thinking of</h5>
+            </div>
+        </div>
+        <div Class = "row">
+            <div class = "col-md-4">
+            </div>
+            <div class = "col-md-4">
+                <div class ="textOnImage">
+                    <img src="assets/images/crystalball.jpg" alt="Crystal Ball Image">
+                    <div class="centeredText"><span class="border border-dark" id="guessesSoFarLetter"></span>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-md-4">
+            </div>
+        </div>
+        <div Class = "row">
+            <div class = "col-md-6">
+                <div>
+                    <p class="text-success">wins: <span class="border border-success" id="winsNum"></span></p>
+                </div>
+            </div>
+            <div class = "col-md-6">
+                <div>
+                    <p class="text-danger">Losses: <span class="border border-danger" id="lossesNum"></span></p>
+                </div>
+            </div>
+        </div>
+        <div Class = "row">
+            <div class = "col-md-6">
+                <div>
+                    <p>Guesses Left: <span class="border border-dark" id="guessesLeftNum"></span></p>
+                </div>
+            </div>
+            <div class = "col-md-6">
+                <div>
+                    <p>Your Guesses so far: <span class="border border-dark" id="guessesSoFarLet"></span></p>
+                </div> 
+            </div>
+        </div>
+    </div>  
 </body>
 <script src= "assets/javascript/game.js"></script>
 </html>

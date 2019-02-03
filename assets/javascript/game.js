@@ -6,11 +6,13 @@ function myPsychicGame (){
     var losses = 0;
     var guessesLeft = 10; 
     var guessesSoFar = " ";
+    var guessesSoFarLet = " ";
 
     var winsElements = document.getElementById("winsNum");
     var lossesElements = document.getElementById("lossesNum");
     var guessesLeftElements = document.getElementById("guessesLeftNum");
     var guessesSoFarElements = document.getElementById("guessesSoFarLet");
+    var guessesSoFarLetterElement = document.getElementById("guessesSoFarLetter");
      
     document.onkeyup = function(event){
         var userSelects = event.key;
@@ -20,21 +22,23 @@ function myPsychicGame (){
         if (userSelects === compSelected){
             wins++;
             winsElements.innerText=wins;
-            reset();
             renderGuesses();
+            reset();
         }
         // This is the lost case
         else if (userSelects !== compSelected && guessesLeft === 0){
             losses++;   
             lossesElements.innerText=losses;
-            reset();
             renderGuesses();
+            reset();
         }
         // This is the not losses but turns left case
         else {
             guessesLeft--;
+            guessesSoFarLet = userSelects;
             guessesSoFar += userSelects; // short hand for > guessesSoFar = guessesSoFar + userSelects. Taking my empty string "" or what ever is in the string and adding what user selected (event.key) and storing in with the new value.
             renderGuesses();
+            
         }
     }   
 
@@ -46,6 +50,8 @@ function myPsychicGame (){
     function renderGuesses (){
         guessesLeftElements.innerText=guessesLeft;
         guessesSoFarElements.innerText=guessesSoFar;
+        guessesSoFarLetterElement.innerText=guessesSoFarLet;
+
     }
 }
 
